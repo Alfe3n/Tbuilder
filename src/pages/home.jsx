@@ -20,9 +20,11 @@ function home() {
           </motion.header>
           <motion.div className="home-content" {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
-              <h1 className="head-text">
+              <h1 className="md:text-6xl lg:text-8xl text-2xl sm:text-4xl font-bold">
                 DESIGNED
-                <br className="hidden xl:block" />
+                {/* <br className="hidden xl:block" />
+                 */}
+                <br></br>
                 BY YOU
               </h1>
             </motion.div>
