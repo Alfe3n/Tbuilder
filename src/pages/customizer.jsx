@@ -7,7 +7,9 @@ import { download } from '../assets'
 import { downloadCanvasToImage, reader } from '../config/helpers'
 import { EditorTabs, FilterTabs, DecalTypes } from '../config/constants'
 import { fadeAnimation, slideAnimation } from '../config/motion'
-import { CustomButton, Tab, FilePicker, AIPicker, ColorPicker } from '../components'
+import { CustomButton, Tab, AIPicker, ColorPicker } from '../components'
+// import { CustomButton, Tab, AIPicker,FilePicker, ColorPicker } from '../components'
+
 function customizer() {
   const snap = useSnapshot(state)
   const [file, setFile] = useState('')
@@ -34,10 +36,10 @@ function customizer() {
     switch (activeEditorTab) {
       case 'colorpicker':
         return <ColorPicker />
-      case 'filepicker':
-        return <FilePicker file={file} setFile={setFile} />
-      case 'aipicker':
-        return <AIPicker />
+      // case 'filepicker':
+      //   return <FilePicker file={file} setFile={setFile} />
+      // case 'aipicker':
+      //   return <AIPicker />
       default:
         return null
     }
@@ -100,11 +102,11 @@ function customizer() {
                 customStyles = 'w-fit px-4 py-2.5 font-bold text-sm'
               }}></CustomButton>
           </motion.div>
-          <motion.div className="filtertabs-container" {...slideAnimation('up')}>
+          {/* <motion.div className="filtertabs-container" {...slideAnimation('up')}>
             {FilterTabs.map((tab) => (
               <Tab key={tab.name} tab={tab} isFilterTab isActiveTab="" />
             ))}
-          </motion.div>
+          </motion.div> */}
         </>
       )}
     </AnimatePresence>
